@@ -28,16 +28,18 @@ __meta__ = {
 
 [node name="StarParticles" type="Particles2D" parent="."]
 position = Vector2( 320, 90 )
+scale = Vector2( 2, 2 )
 amount = 200
 lifetime = 7.0
 preprocess = 7.0
 process_material = SubResource( 1 )
 
-[node name="EnemySpawner" parent="." instance=ExtResource( 2 )]
-position = Vector2( 319, 0 )
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 20, 90 )
+z_index = 1
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 2 )]
+position = Vector2( 319, 0 )
 
 [node name="Score" type="Label" parent="."]
 anchor_right = 1.0
