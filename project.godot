@@ -24,6 +24,10 @@ config/name="Heartbeast-space-shooter"
 run/main_scene="res://StartMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+BgMusic="*res://BgMusic.tscn"
+
 [display]
 
 window/size/width=320
