@@ -5,6 +5,8 @@ export(int) var SPEED: int = 100
 const EffectExplosion = preload("res://EffectExplosion.tscn")
 const Bullet = preload("res://Bullet.tscn")
 
+signal player_death
+
 func _process(delta: float) -> void:
 	# if Input.is_action_pressed("ui_right"): move(SPEED, 0, delta)
 	# if Input.is_action_pressed("ui_left"): move(-SPEED, 0, delta)
@@ -32,3 +34,5 @@ func _exit_tree():
 	var effect_explosion = EffectExplosion.instance()
 	main.call_deferred("add_child", effect_explosion)
 	effect_explosion.global_position = global_position
+	
+	emit_signal("player_death")
