@@ -1,6 +1,6 @@
 extends Node
 
-const SAVE_FILE_PATH = "res://state.json"
+const SAVE_FILE_PATH = "user://state.json"
 
 var default_save_data = {
 	"current_highscore": 0
